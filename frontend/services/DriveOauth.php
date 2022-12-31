@@ -7,15 +7,12 @@ use yii\authclient\OAuth2;
 
 class DriveOauth extends Google
 {
-
-
-    public $returnUrl = "http://localhost:8080/files/respond";
-
+    private $returnUri = "files/respond";
 
     public function __construct($config = [])
     {
         parent::__construct($config);
-        $this->setReturnUrl($this->returnUrl);
+        $this->setReturnUrl(env('APP_URL')."/".$this->returnUri);
 
         $this->clientId = env('client_id');
         $this->clientSecret = env('secret_key');

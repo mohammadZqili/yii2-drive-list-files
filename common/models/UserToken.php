@@ -28,7 +28,8 @@ class UserToken extends \yii\db\ActiveRecord
         return [
             [['id'], 'required'],
             [['id', 'user_id'], 'integer'],
-            [['oauth2_token', 'next_page_token'], 'string', 'max' => 255],
+            [['oauth2_token'], 'string', 'max' => 255],
+            [['next_page_token'], 'string'],
             [['user_id'], 'unique'],
             [['id'], 'unique'],
         ];

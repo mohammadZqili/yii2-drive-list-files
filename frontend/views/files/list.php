@@ -3,20 +3,18 @@
 /** @var yii\web\View $this */
 
 use yii\helpers\Html;
-
-
 ?>
 
 <div class="site-about">
-    <p>This is the About page. You may modify the following file to customize its content:</p>
+    <p>Drive Files List:</p>
     <table class="table">
         <tr>
-            <th>title</th>
-            <th>thumb link</th>
-            <th>embed link</th>
-            <th>modified date</th>
-            <th>owners</th>
-            <th>size</th>
+            <th>Title</th>
+            <th>Thumb link</th>
+            <th>Embed link</th>
+            <th>Modified date</th>
+            <th>Wwners</th>
+            <th>Size</th>
         </tr>
         <tbody>
         <?php
@@ -40,7 +38,7 @@ use yii\helpers\Html;
         </tbody>
     </table>
     <form name="next" action="/files/file?next=true" method="GET">
-        <input type="submit" name="next" />
+        <input type="submit" name="next" value="next=page" />
     </form>
 </div>
 
